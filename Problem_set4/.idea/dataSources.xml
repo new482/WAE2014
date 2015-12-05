@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3012782384">
+    <data-source source="LOCAL" name="Rails Problem_set4: development" uuid="5a1363c6-5d51-4924-8302-1b33ecc3018f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:Problem_set4_development</jdbc-url>
+      <user-name>web6</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Problem_set4: test" uuid="7cec7604-1f65-4b2e-b76d-4c1abd60abdc">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:Problem_set4_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Problem_set4: production" uuid="d4194a73-7ff2-4b4e-a836-b9cd1fab0aa1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:Problem_set4_production</jdbc-url>
+      <user-name>web6</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddffadff8dfe5dfe8dfe6dfefdfe7dff5dff9dfefdffedf9edff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

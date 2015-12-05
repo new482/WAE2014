@@ -1,0 +1,7 @@
+<h1> Asian institute of technology</h1>
+
+  <% @schools.each do |i| %>
+    <ul>
+        <li><%= link_to i.schoolname, controller: :content, action: :department, id_school: i.id%></li>
+    </ul>
+  <% end %>

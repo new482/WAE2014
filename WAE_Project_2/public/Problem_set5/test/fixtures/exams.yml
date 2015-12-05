@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 
+  user_id: 
+  createddate: 2014-11-02
+  status: false
+  year: MyString
+  posttype: MyString
+  question_id: 1
+  accepted: false
+  acceptedby: 1
+
+two:
+  course_id: 
+  user_id: 
+  createddate: 2014-11-02
+  status: false
+  year: MyString
+  posttype: MyString
+  question_id: 1
+  accepted: false
+  acceptedby: 1

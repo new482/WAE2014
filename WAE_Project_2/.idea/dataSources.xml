@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="583392329">
+    <data-source source="LOCAL" name="Rails WAE_Project_2: development" uuid="8a26ebbf-2899-454b-8ed0-a63a2662ac52">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_2_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WAE_Project_2: test" uuid="b8314662-562f-4358-9d49-eea00acbde97">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_2_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WAE_Project_2: production" uuid="e5d515f4-0912-404a-93ec-d5db51eb1ed2">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_2_production</jdbc-url>
+      <user-name>web6</user-name>
+      <user-password>df99df98dfc9df9cdf9ddfc8dfcbdf9bdfcbdfcedf9edf9adf9cdf9bdf9ddfc8df93df9ddf9adf9bdfcbdf9edfcbdf9ddf9edfc9dfcedf93df9adfcbdf98dfcbdf92df92df92dfcbdf9cdf9cdf9edf9adfcedfcbdf9adfccdf9cdf93dfcfdf9ddf9fdfcedf9fdfccdf98df9fdf9adfc9df98dfcfdf9adf9bdf99df99dfcfdf92dfccdf98df9fdfc8df99df9edf93df9bdf9fdf9cdf9cdfc9df9adf9adf9cdf9fdf98df9fdf9edf9adf9bdf9fdfcfdf93df9ddf92df9adf9fdf9edf92df99df9ddf92dfcedfc9df93dfc9dfc9df9edfcedfc8dfcfdf9adf92df98dfc9df9cdfcedf9cdf9edfcbdf9adf9bdfccdf9adf99dfc9df9fdf98dfc9dfc8dfc9dfc8dfcb</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

@@ -1,0 +1,14 @@
+<h1>Upload a file</h1>
+<%= form_tag({:action => 'uploadFile'}) do %>
+    <p><label for='upload_file'>Select File</label> :
+      <%= file_field 'upload', 'datafile' %></p>
+
+    <p>Type of the file :
+    <%= radio_button_tag :posttype, 'question', :checked => true %>
+    <%= label :posttype_question, 'Question' %>
+    <%= radio_button_tag :posttype, 'answer' %>
+    <%= label :posttype_answer, 'Answer' %></p>
+
+    <p><%= select_year(Date.today, :start_year => Time.now.year, :end_year => 1959, :field_name => 'examyear') %></p>
+    <%= submit_tag 'Upload' %>
+<% end %>

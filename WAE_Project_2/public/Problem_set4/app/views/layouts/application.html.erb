@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProblemSet4</title>
+<<<<<<< HEAD
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+=======
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+ <%= csrf_meta_tags %>
+>>>>>>> ec4ed160773dfdd524d9a2b1eef044bb87c83645
+</head>
+<body>
+
+<% if flash[:notice] %>
+    <p class="notice"><%= notice %></p>
+<% end %>
+<% if flash[:alert] %>
+    <p class="alert"><%= alert %></p>
+<% end %>
+<% if flash[:error] %>
+    <div id="error">
+      <%= flash[:error] %>
+    </div>
+<% end %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 header">
+<<<<<<< HEAD
+      <h2>Problem Set 4</h2>
+=======
+     <h2>Problem Set 4</h2>
+	<h4>----- <%= link_to "Security Documentation", "Problem_set4/PS4/security.pdf" %>. -----</h4>
+	<h4>----- <%= link_to "Documentation","Problem_set4/PS4/docm.pdf" %>. -----</h4>
+>>>>>>> ec4ed160773dfdd524d9a2b1eef044bb87c83645
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span3 manage_panel">
+      <h3><a href="/">&larr; Home</a></h3>
+      <%= yield :role_sidebar %>
+      <%= render :partial => "layouts/current_user_info" %>
+    </div>
+    <div class="span9 main_content">
+      <%= yield :role_main %>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+QN 7)<br/>
+=> <br/>
+CREATE TABLE my_stocks <br/>
+  ( <br/>
+     symbol        VARCHAR(20) NOT NULL, <br/>
+     n_shares      INTEGER NOT NULL, <br/>
+     date_acquired DATE NOT NULL <br/>
+  ); <br/>
+
+=><br/>
+--Copying Data from file to table.<br/>
+COPY my_stocks(symbol,n_shares,date_acquired) FROM '/home/manish/RubymineProjects/mystock' (DELIMITER(E'\t'));<br/>
+
+----------------------------------------------------------------------------------------------------------------------
+<br/>
+QN 8) <br/>
+=><br/>
+CREATE TABLE newly_acquired_stocks <br/>
+   ( <br/>
+     symbol        VARCHAR(20) NOT NULL, <br/>
+     n_shares      INTEGER NOT NULL, <br/>
+     date_acquired DATE NOT NULL<br/>
+);<br/>
+<br/>
+--Creating table stock_prices using values of table my_stocks<br/>
+CREATE TABLE stock_prices AS <br/>
+  SELECT symbol, <br/>
+         CURRENT_DATE, <br/>
+         33.434 AS price <br/>
+  FROM   my_stocks; <br/>
+   <br/>
+=> <br/>
+--Copying about half of the rows fro my_stocks to newly_acquired_stocks.<br/>
+INSERT INTO newly_acquired_stocks <br/>
+SELECT symbol, <br/>
+       n_shares, <br/>
+       date_acquired <br/>
+FROM   my_stocks <br/>
+WHERE  n_shares > 25; <br/>
+
+-----------------------------------------------------------------------------------------------------------------------
+<br/>
+QN 9) <br/>
+=><br/>
+--Simple INNER JOIN.<br/>
+SELECT M.symbol, <br/>
+       M.n_shares, <br/>
+       S.price, <br/>
+       (M.n_shares * S.price) AS current_value <br/>
+FROM   my_stocks AS M, <br/>
+       stock_prices AS S <br/>
+WHERE  M.symbol = S.symbol; <br/>
+
+----------------------------------------------------------------------------------------------------------------------
+<br/>
+QN 10)<br/> 
+=> <br/>
+--Insert a new row into table my_stocks. <br/>
+INSERT INTO my_stocks VALUES ('New',5,'03/19/2014');<br/>
+    <br/>
+=> <br/>
+--Using Full outer join.<br/>
+SELECT M.symbol, <br/>
+       M.n_shares, <br/>
+       S.price,  <br/>
+       (M.n_shares * S.price) AS current_value<br/>
+FROM   my_stocks AS M <br/>
+       FULL OUTER JOIN stock_prices AS S <br/>
+                    ON M.symbol = S.symbol; <br/>
+<br/>
+----------------------------------------------------------------------------------------------------------------------
+<br/>
+QN 11)<br/>
+=><br/>
+--function retruning stock value.<br/>
+CREATE FUNCTION return_stock_value(symbol varchar) <br/>
+returns           integer AS $$ <br/>
+DECLARE character char; <br/>
+ascii_value       int; <br/>
+begin <br/>
+  ascii_value = 0; <br/>
+  for i IN 1..length(symbol) <br/>
+  loop <br/>
+	character = substring(symbol FROM i FOR 1); <br/>
+  	ascii_value = ascii_value + ascii(character); <br/>
+  end loop; <br/>
+  return ascii_value; <br/>
+end; <br/>
+$$ language plpgsql;<br/>
+<br/>
+=> <br/>
+--updating table stock_prices using function Return_stock_value(varchar).<br/>
+UPDATE stock_prices <br/> 
+SET    price = Return_stock_value(symbol) <br/>
+WHERE  symbol IN (SELECT symbol 
+                  FROM   my_stocks); <br/>
+<br/>
+=><br/>
+--funtion returning portfolio of each stock.<br/>
+CREATE OR REPLACE FUNCTION return_portfolio() <br/>
+returns TABLE(symbol varchar(20), acquired date, price_per_share decimal,current_value decimal) AS $$ <br/>
+BEGIN <br/>
+  RETURN query <br/>
+  SELECT m.symbol, <br/>
+         m.date_acquired, <br/>
+	 s.price, <br/>
+         (s.price * m.n_shares) AS current_value<br/>
+  FROM   my_stocks                       AS m, <br/>
+         stock_prices                    AS s <br/>
+  WHERE  m.symbol = s.symbol; <br/>
+END<br/>
+$$ language plpgsql;<br/>
+<br/>
+----------------------------------------------------------------------------------------------------------------------
+<br/>
+QN 12)<br/>
+=><br/>
+--Inserting stocks to my_stocks whose price is higher that average price.<br/>
+INSERT INTO my_stocks <br/>
+SELECT M.symbol, <br/>
+       M.n_shares, <br/>
+       CURRENT_DATE AS date_acquired <br/>
+FROM   stock_prices S, <br/>
+       my_stocks M <br/>
+WHERE  S.symbol = M.symbol <br/>
+       AND S.price > (SELECT Avg(price) FROM stock_prices);<br/>
+<br/>
+=><br/>
+--Report with symbols and total shares.<br/>
+SELECT symbol, <br/>
+       Sum(n_shares) AS total_shares <br/>
+FROM   my_stocks <br/>
+GROUP  BY symbol; <br/>
+<br/>
+=><br/>
+--Report with symbol and total value held per share.<br/>
+SELECT M.symbol, <br/>
+       Sum(M.n_shares * S.price) AS total_value <br/>
+FROM   my_stocks M <br/>
+       INNER JOIN stock_prices S <br/>
+               ON S.symbol = M.symbol <br/>
+GROUP  BY M.symbol; 
+<br/><br/>
+=><br/>
+--Report with symbol, total shares and total value held per share which has at least two block of shares.
+<br/>SELECT M.symbol, <br/>
+       Sum(M.n_shares) AS total_shares,<br/>
+       Sum(M.n_shares * S.price) AS total_value <br/>
+FROM   my_stocks M <br/>
+       INNER JOIN stock_prices S
+               ON S.symbol = M.symbol <br/>
+GROUP  BY M.symbol<br/>
+HAVING COUNT(M.symbol) >= 2;<br/>
+<br/>
+----------------------------------------------------------------------------------------------------------------------
+<br/>
+13)<br/>
+=><br/>
+--enpasulating last query of 12 in the view stocks_i_like.<br/>
+CREATE VIEW stocks_i_like <br/>
+AS <br/>
+  SELECT M.symbol, <br/>
+         Sum(M.n_shares)           AS total_shares, <br/>
+         Sum(M.n_shares * S.price) AS total_value <br/>
+  FROM   my_stocks M <br/>
+         INNER JOIN stock_prices S
+                 ON S.symbol = M.symbol <br/>
+  GROUP  BY M.symbol <br/>
+  HAVING Count(M.symbol) >= 2; <br/>
+<br/>
+=><br/>
+--select query using the created view.<br/>
+SELECT symbol,total_shares,total_value FROM stocks_i_like;<br/><br/>
+
+----------------------------------------------------------------------------------------------------------------------

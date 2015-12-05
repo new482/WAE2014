@@ -1,0 +1,6 @@
+<h1><%= @school.schoolname%></h1>
+<% @departments.each do |i| %>
+    <ul>
+      <li><%= link_to i.departmentname, controller: :content, action: :course, id_department: i.id%></li>
+    </ul>
+<% end %>

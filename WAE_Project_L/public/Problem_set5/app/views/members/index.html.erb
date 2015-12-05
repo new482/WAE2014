@@ -1,0 +1,70 @@
+<% content_for :head do  %>
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<% end  %>
+<h2>Listing members</h2>
+<%=link_to 'Administrator',:controller => 'members' ,:action => 'info' %>
+
+<% if @checkAdmin == 1  %>
+
+<h3>All Users</h3>
+<table class="flat-table" >
+  <thead>
+    <tr>
+      <th>UserName</th>
+      <th>Email</th>
+      <th>Date created</th>
+      <th>Last signed in</th>
+      <th>Count</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+     <% if member.role_id != 1 %>
+      <tr>
+        <td style="width: 100px"><%= member.username %></td>
+        <td style="width: 250px"><%= member.email %></td>
+        <td style="width: 250px"><%= member.created_at %></td>
+        <td style="width: 250px"><%= member.last_sign_in_at %></td>
+        <td style="width: 150px"><%= member.sign_in_count %></td>
+        <td style="width: 200px">
+          <% if member.role_id == 3 %>
+              <%=link_to 'Release',edit_member_path(member.id, :ban => 0) %>
+          <% else %>
+              <%=link_to 'Ban', edit_member_path(member.id, :ban => 1) %>
+          <% end %>
+        </td>
+      </tr>
+     <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+    </br>
+    <h3>Recently Registered Users</h3>
+    <table class="flat-table">
+      <thead>
+      <tr>
+        <th>UserName</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @members_recent.each do |member| %>
+          <% if member.role_id != 1 %>
+              <tr>
+                <td style="width: 100px"><%= member.username %></td>
+                <td style="width: 100px"><%= member.email %></td>
+              </tr>
+          <% end %>
+      <% end %>
+      </tbody>
+    </table>
+
+
+<%= line_chart User.group_by_day(:created_at, range: 1.weeks.ago.midnight..Time.now).count, library: {backgroundColor: "#eee"} %>
+<% end %>
+<br>
+

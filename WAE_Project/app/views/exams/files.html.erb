@@ -1,0 +1,94 @@
+<script>
+    function myfunction(mytmp,caption_name) {
+        FB.init({
+            appId: '977169502299183',
+            xfbml: true,
+            version: 'v2.1'
+        });
+        FB.ui({
+            method: 'feed',
+            link: 'https://web6.cs.ait.ac.th' + mytmp,
+            caption: caption_name,
+        }, function (response) {
+        });
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    }
+</script>
+
+
+<div class="container">
+  <h2>Uploaded Question/Answers</h2>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= link_to @school.schoolname, controller: :exams, action: :department%>
+        <%= " - " %>
+        <%= link_to @department.departmentname, controller: :exams, action: :course %>
+        <%= " - " + @courses.coursename %>
+      </h3>
+    </div>
+    <table class="table table-striped">
+      <thead data-sort-name="post_type" data-sort-order="desc">
+      <tr>
+        <th data-field="Question/ Solutions" data-align="right" data-sortable="true">Post Type </th>
+        <th data-field="exam_type" data-align="right" data-sortable="true">Exam Type</th>
+        <th data-field="year" data-align="right" data-sortable="true">Year</th>
+        <th data-field="uploaded_by" data-align="right" data-sortable="true">Uploaded By</th>
+        <% if user_signed_in? %>
+            <% if current_user.role_id == 1 %>
+                <% if @count == 0 %>
+                    <th></th>
+                <% else %>
+                    <th></th>
+                    <th></th>
+                    <th> <%=link_to 'delete all',edit_exam_path(1, :delete => 3, :course_id => params[:id_course]) , class: 'btn btn-danger'%></th>
+                <% end %>
+            <% end %>
+        <% end %>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @exams.each do |exam| %>
+          <tr>
+            <td><%= exam.posttype %></td>
+            <td><%= exam.examtype %></td>
+            <td><%= exam.year %></td>
+            <td style="width: 150px"><%= @users.find(exam.user_id).username %></td>
+            <% if user_signed_in? %>
+                <% if current_user.role_id == 1 %>
+                    <td style="width: 120px"><%= link_to 'display', "/data/" + exam.path , class: 'btn btn-primary'%></td>
+                    <td style="width: 120px"><%= link_to 'share', '#' , class: 'btn btn-success', :onclick=>"myfunction('/data/#{exam.path}','#{@school.schoolname}-#{@department.departmentname}-#{@courses.coursename} #{exam.examtype} #{exam.year} [#{exam.posttype}]')" %></td>
+                    <td style="width: 120px"><%= link_to 'delete', edit_exam_path(exam.id, :delete => 1) , class: 'btn btn-danger' %></td>
+                <% else %>
+                    <% if exam.accepted == true %>
+                        <td style="width: 120px"><%= link_to 'display', "/data/" + exam.path , class: 'btn btn-primary' %></td>
+                        <td style="width: 120px"><%= link_to 'share', '#' , class: 'btn btn-success', :onclick=>"myfunction('/data/#{exam.path}','#{@school.schoolname}-#{@department.departmentname}-#{@courses.coursename} #{exam.examtype} #{exam.year} [#{exam.posttype}]')" %></td>
+                    <% else %>
+                        <td style="width: 120px"><%= link_to 'needs approval', '', class: 'btn btn-warning' %></td>
+                    <% end %>
+                <% end %>
+            <% else %>
+                <td style="width: 120px"><%= link_to 'share', '#' , class: 'btn btn-success', :onclick=>"myfunction('/data/#{exam.path}','#{@school.schoolname}-#{@department.departmentname}-#{@courses.coursename} #{exam.examtype} #{exam.year} [#{exam.posttype}]')" %></td>
+                <td style="width: 120px"><%= link_to 'display', "/data/" + exam.path , class: 'btn btn-primary' %></td>
+            <% end %>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @exams, renderer: BootstrapPagination::Rails %>
+  </div>
+  <% if user_signed_in? %>
+      <%= link_to 'Upload new', {controller: :exams, action: :new, id_school: params[:id_school], id_department: params[:id_department] }, :class => 'btn btn-primary' %>
+  <% end %>
+</div>
+    

@@ -1,0 +1,5 @@
+<h3>Search Result</h3>
+
+<% for result in @search_output %>
+    <li><%=  result.author_name %> : <%= result.quote %></li>
+<% end %>

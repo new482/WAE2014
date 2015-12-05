@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1163633919">
+    <data-source source="LOCAL" name="Rails WAE_Project: development" uuid="516568e8-2e82-4f1d-b814-d40ec11f4126">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WAE_Project: test" uuid="0f3224ff-ed8f-457a-b803-66bea27fc526">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WAE_Project: production" uuid="644b1397-5628-44c5-9638-76c193970364">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:WAE_Project_production</jdbc-url>
+      <user-name>web6</user-name>
+      <user-password>df99df98dfc9df9cdf9ddfc8dfcbdf9bdfcbdfcedf9edf9adf9cdf9bdf9ddfc8df93df9ddf9adf9bdfcbdf9edfcbdf9ddf9edfc9dfcedf93df9adfcbdf98dfcbdf92df92df92dfcbdf9cdf9cdf9edf9adfcedfcbdf9adfccdf9cdf93dfcfdf9ddf9fdfcedf9fdfccdf98df9fdf9adfc9df98dfcfdf9adf9bdf99df99dfcfdf92dfccdf98df9fdfc8df99df9edf93df9bdf9fdf9cdf9cdfc9df9adf9adf9cdf9fdf98df9fdf9edf9adf9bdf9fdfcfdf93df9ddf92df9adf9fdf9edf92df99df9ddf92dfcedfc9df93dfc9dfc9df9edfcedfc8dfcfdf9adf92df98dfc9df9cdfcedf9cdf9edfcbdf9adf9bdfccdf9adf99dfc9df9fdf98dfc9dfc8dfc9dfc8dfcb</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails pmbokdocs: development" uuid="ec606d11-6ac7-428a-8c9d-0d6a13dbc9aa">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:pmbokdocs_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails pmbokdocs: test" uuid="d8b8e24e-a9d0-446b-ab15-76f8d83b3653">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:pmbokdocs_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails pmbokdocs: production" uuid="1f38ac9c-88e2-4f0a-93e9-0b240b795517">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:pmbokdocs_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

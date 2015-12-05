@@ -1,0 +1,28 @@
+<div class="container">
+  <% if user_signed_in? %>
+      <h2> Upload and View Question/Solutions</h2>
+  <% else %>
+      <h2> View Question/Solutions</h2>
+  <% end %>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Choose School</h3>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>School Id</th>
+        <th>School Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @schools.each do |i| %>
+          <tr>
+            <td style="width: 100px"><%= i.id %></td>
+            <td style="width: 400px"><%= link_to i.schoolname, controller: :exams, action: :department, id_school: i.id%></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

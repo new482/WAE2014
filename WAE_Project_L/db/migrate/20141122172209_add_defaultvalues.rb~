@@ -1,0 +1,4 @@
+class AddDefaultvalues < ActiveRecord::Migration
+  def change
+  end
+end

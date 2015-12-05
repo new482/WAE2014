@@ -1,0 +1,7 @@
+class HomeController < ApplicationController
+  def index
+
+  end
+  def ex7_13
+  end 	
+end

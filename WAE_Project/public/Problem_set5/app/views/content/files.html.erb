@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Question / Answers</th>
+    <th>Year</th>
+    <th>Uploaded By</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @exams.each do |exam| %>
+      <tr>
+        <td><%= exam.examtype %></td>
+        <td><%= exam.year %></td>
+        <td><%= @users.find(exam.user_id).email %></td>
+        <td><%= link_to "download" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Upload a file", controller: :content, action: :upload %>

@@ -1,0 +1,14 @@
+<h1>Divide by Zero</h1>
+
+<%= link_to 'Back to Home', home_index_path %><br/><br/>
+    <% if @result.is_a? Integer %>
+
+        <p1>Result = <%= @result %></p1>
+
+    <% else %>
+
+        <%@result.each do |line| %>
+            <p1><%= line %></p1><br/>
+        <% end %>
+
+    <%end%>

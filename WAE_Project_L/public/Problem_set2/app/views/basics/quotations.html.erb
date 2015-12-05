@@ -1,0 +1,117 @@
+<h3>Searching Quotation</h3>
+<%= form_tag url_for(:controller => 'basics', :action => 'search'), :method => 'get' do  %>
+
+    <fieldset>
+        <legend>Enter quote detail</legend>
+        <div class="form_row">
+            <%= text_field_tag :search_input %>
+        </div>
+        <p><%= submit_tag 'Search' %></p>
+    </fieldset>
+<% end %>
+
+
+
+
+<h3>Quotations</h3>
+<ul>
+  <% for quotation in @quotations %>
+      <li><%=  quotation.author_name %>: <%=  quotation.quote %>
+      <%=  link_to "Kill", {:controller => 'basics', :action => 'killQuotation', :id => quotation.id} %></li>
+  <% end %>
+</ul>
+<br/>
+    <% if params[:sort_by] == "date" %>
+        <%= link_to "Sort by category", :action => :quotations, :sort_by => :category %><br/>
+    <% else %>
+        <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %><br/>
+    <% end %>
+        <%= link_to "Clear Cookies", :action => :clearCookie %>
+<hr/>
+
+
+
+<h3>New quotation</h3>
+<%= form_for @quotation, :url => {:action => :quotations } , :method => 'post'   do |form| %>
+
+    <fieldset>
+      <legend>Enter details</legend>
+      <div class="form_row">
+        <%= form.label :author_name %>
+        <%= form.text_field :author_name, :size => 20, :maxlength => 40, :required => true %>
+      </div>
+      <div class="form_row">
+        <%= form.label :category %>
+<<<<<<< HEAD
+        <%= form.collection_select :category,Quotation.select(:category),:category, :category %>
+=======
+        <%= form.collection_select :category,Quotation.select(:category).uniq,:category, :category %>
+>>>>>>> ec4ed160773dfdd524d9a2b1eef044bb87c83645
+      </div>
+      <div class="form_row">
+        <%= label_tag 'New Category' %>
+        <%= text_field_tag 'category_new' %>
+      </div>
+      <div class="form_row">
+        <%= form.label :quote %>
+        <%= form.text_area :quote, :rows => 2, :cols => 40, :maxlength => 500, :required => true %>
+      </div>
+      <p>
+      <div class="form_row">
+        <%= form.submit 'Create' %>
+<<<<<<< HEAD
+      </div>
+      </p>
+    </fieldset>
+<% end %>
+
+
+<h3>XML AND JSON Export</h3>
+    <fieldset>
+      <legend>Select to export</legend>
+      <p><%= link_to "XML EXPORT", '/basics.xml' %></p>
+      <p><%= link_to "JSON EXPORT", '/basics.json' %></p>
+    </fieldset>
+
+
+<h3>XML Parsing</h3>
+<%= form_tag url_for(:controller => 'basics', :action => 'xmlParsing'), :method => 'get' do  %>
+    <fieldset>
+      <legend>Enter url.xml</legend>
+      <div class="form_row">
+        <%= text_field_tag :url %>
+      </div>
+      <p><%= submit_tag 'Submit' %></p>
+    </fieldset>
+<% end %>
+=======
+      </div>
+      </p>
+    </fieldset>
+<% end %>
+
+
+<h3>XML AND JSON Export</h3>
+    <fieldset>
+      <legend>Select to export</legend>
+      <p><%= link_to "XML EXPORT", '/Problem_set2/basics.xml' %></p>
+      <p><%= link_to "JSON EXPORT", '/Problem_set2/basics.json' %></p>
+    </fieldset>
+
+
+<h3>XML Parsing</h3>
+<%= form_tag url_for(:controller => 'basics', :action => 'xmlParsing'), :method => 'get' do  %>
+    <fieldset>
+      <legend>Enter url.xml</legend>
+      <div class="form_row">
+        <%= text_field_tag :url %>
+      </div>
+      <p><%= submit_tag 'Submit' %></p>
+    </fieldset>
+<% end %>
+
+
+<h3>Solution to exercise 7-13</h3>
+<p><%= link_to 'Questions 7-13', '/solution.txt' %></p>
+
+>>>>>>> ec4ed160773dfdd524d9a2b1eef044bb87c83645

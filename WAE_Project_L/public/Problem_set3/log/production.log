@@ -1,0 +1,744 @@
+I, [2014-10-06T15:08:56.814134 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.136 at 2014-10-06 15:08:56 +0700
+I, [2014-10-06T15:08:56.836719 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T15:08:56.861211 #7584]  INFO -- :   Rendered home/index.html.erb (5.1ms)
+I, [2014-10-06T15:08:56.862071 #7584]  INFO -- : Completed 200 OK in 25ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:09:52.361875 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.243 at 2014-10-06 15:09:52 +0700
+I, [2014-10-06T15:09:52.367767 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T15:09:52.372497 #7584]  INFO -- :   Rendered home/index.html.erb (1.5ms)
+I, [2014-10-06T15:09:52.372975 #7584]  INFO -- : Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:09:56.777599 #7584]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.243 at 2014-10-06 15:09:56 +0700
+I, [2014-10-06T15:09:56.779869 #7584]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-06T15:09:56.789495 #7584]  INFO -- :   Rendered home/profile1.html.erb (1.9ms)
+I, [2014-10-06T15:09:56.789855 #7584]  INFO -- : Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:09:56.891779 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 192.41.170.243 at 2014-10-06 15:09:56 +0700
+F, [2014-10-06T15:09:56.894690 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-06T15:10:06.258212 #7584]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.243 at 2014-10-06 15:10:06 +0700
+I, [2014-10-06T15:10:06.260469 #7584]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-06T15:10:06.271303 #7584]  INFO -- :   Rendered home/profile2.erb (1.9ms)
+I, [2014-10-06T15:10:06.271598 #7584]  INFO -- : Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:10:06.445849 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile2.jpg" for 192.41.170.243 at 2014-10-06 15:10:06 +0700
+F, [2014-10-06T15:10:06.447450 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-06T15:10:13.801308 #7584]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.136 at 2014-10-06 15:10:13 +0700
+I, [2014-10-06T15:10:13.804233 #7584]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-06T15:10:13.806333 #7584]  INFO -- :   Rendered home/profile2.erb (0.4ms)
+I, [2014-10-06T15:10:13.806645 #7584]  INFO -- : Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:10:13.819278 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile2.jpg" for 192.41.170.136 at 2014-10-06 15:10:13 +0700
+F, [2014-10-06T15:10:13.821258 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-06T15:11:43.735863 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.220 at 2014-10-06 15:11:43 +0700
+I, [2014-10-06T15:11:43.741585 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T15:11:43.746520 #7584]  INFO -- :   Rendered home/index.html.erb (2.0ms)
+I, [2014-10-06T15:11:43.746918 #7584]  INFO -- : Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T15:12:38.172087 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.220 at 2014-10-06 15:12:38 +0700
+I, [2014-10-06T15:12:38.177608 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T15:12:38.182337 #7584]  INFO -- :   Rendered home/index.html.erb (1.7ms)
+I, [2014-10-06T15:12:38.182749 #7584]  INFO -- : Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T16:25:50.716308 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.174 at 2014-10-06 16:25:50 +0700
+I, [2014-10-06T16:25:50.721240 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T16:25:50.725506 #7584]  INFO -- :   Rendered home/index.html.erb (1.4ms)
+I, [2014-10-06T16:25:50.725870 #7584]  INFO -- : Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T16:25:56.313607 #7584]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.174 at 2014-10-06 16:25:56 +0700
+I, [2014-10-06T16:25:56.318553 #7584]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-06T16:25:56.321913 #7584]  INFO -- :   Rendered home/profile1.html.erb (0.7ms)
+I, [2014-10-06T16:25:56.322264 #7584]  INFO -- : Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T16:25:56.455944 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 192.41.170.174 at 2014-10-06 16:25:56 +0700
+F, [2014-10-06T16:25:56.458026 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-06T17:05:00.286654 #7584]  INFO -- : Started GET "/Problem_set3" for 203.159.39.162 at 2014-10-06 17:05:00 +0700
+I, [2014-10-06T17:05:00.291628 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-06T17:05:00.295695 #7584]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-06T17:05:00.296037 #7584]  INFO -- : Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T17:05:03.140640 #7584]  INFO -- : Started GET "/Problem_set3/home/profile1" for 203.159.39.162 at 2014-10-06 17:05:03 +0700
+I, [2014-10-06T17:05:03.141749 #7584]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-06T17:05:03.143064 #7584]  INFO -- :   Rendered home/profile1.html.erb (0.4ms)
+I, [2014-10-06T17:05:03.143256 #7584]  INFO -- : Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-06T17:05:03.267492 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 203.159.39.162 at 2014-10-06 17:05:03 +0700
+F, [2014-10-06T17:05:03.269535 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-07T00:11:10.693974 #7584]  INFO -- : Started GET "/Problem_set3" for 203.159.53.93 at 2014-10-07 00:11:10 +0700
+I, [2014-10-07T00:11:10.703458 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-07T00:11:10.708164 #7584]  INFO -- :   Rendered home/index.html.erb (1.9ms)
+I, [2014-10-07T00:11:10.708527 #7584]  INFO -- : Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+I, [2014-10-08T10:10:39.104216 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.205 at 2014-10-08 10:10:39 +0700
+I, [2014-10-08T10:10:39.137553 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-08T10:10:39.153055 #7584]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-08T10:10:39.153414 #7584]  INFO -- : Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+I, [2014-10-09T17:07:13.137743 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.205 at 2014-10-09 17:07:13 +0700
+I, [2014-10-09T17:07:13.182542 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-09T17:07:13.186881 #7584]  INFO -- :   Rendered home/index.html.erb (1.6ms)
+I, [2014-10-09T17:07:13.187355 #7584]  INFO -- : Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T00:16:24.588388 #7584]  INFO -- : Started GET "/Problem_set3" for 203.159.53.75 at 2014-10-10 00:16:24 +0700
+I, [2014-10-10T00:16:24.604376 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-10T00:16:24.614340 #7584]  INFO -- :   Rendered home/index.html.erb (1.4ms)
+I, [2014-10-10T00:16:24.614696 #7584]  INFO -- : Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T01:56:10.899252 #7584]  INFO -- : Started GET "/Problem_set3" for 203.159.40.100 at 2014-10-10 01:56:10 +0700
+I, [2014-10-10T01:56:10.903987 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-10T01:56:10.907719 #7584]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-10T01:56:10.908080 #7584]  INFO -- : Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T09:51:32.065230 #7584]  INFO -- : Started GET "/Problem_set3" for 192.41.170.223 at 2014-10-10 09:51:32 +0700
+I, [2014-10-10T09:51:32.085847 #7584]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-10T09:51:32.094263 #7584]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-10T09:51:32.094669 #7584]  INFO -- : Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T09:51:36.260165 #7584]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.223 at 2014-10-10 09:51:36 +0700
+I, [2014-10-10T09:51:36.270710 #7584]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-10T09:51:36.294014 #7584]  INFO -- :   Rendered home/profile1.html.erb (20.4ms)
+I, [2014-10-10T09:51:36.294441 #7584]  INFO -- : Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T09:51:36.339885 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 192.41.170.223 at 2014-10-10 09:51:36 +0700
+F, [2014-10-10T09:51:36.402814 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-10T09:51:46.455666 #7584]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.223 at 2014-10-10 09:51:46 +0700
+I, [2014-10-10T09:51:46.458348 #7584]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-10T09:51:46.460023 #7584]  INFO -- :   Rendered home/profile1.html.erb (0.3ms)
+I, [2014-10-10T09:51:46.460276 #7584]  INFO -- : Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2014-10-10T09:51:46.529303 #7584]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 192.41.170.223 at 2014-10-10 09:51:46 +0700
+F, [2014-10-10T09:51:46.531104 #7584] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-11T16:44:00.569979 #15291]  INFO -- : Started GET "/Problem_set3" for 125.25.175.72 at 2014-10-11 16:44:00 +0700
+I, [2014-10-11T16:44:00.593141 #15291]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-11T16:44:00.626429 #15291]  INFO -- :   Rendered home/index.html.erb (4.7ms)
+I, [2014-10-11T16:44:00.627208 #15291]  INFO -- : Completed 200 OK in 34ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-11T16:44:36.649969 #15291]  INFO -- : Started GET "/Problem_set3/home/profile1" for 125.25.175.72 at 2014-10-11 16:44:36 +0700
+I, [2014-10-11T16:44:36.651997 #15291]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-11T16:44:36.663301 #15291]  INFO -- :   Rendered home/profile1.html.erb (1.7ms)
+I, [2014-10-11T16:44:36.663625 #15291]  INFO -- : Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-11T16:44:37.131256 #15291]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 125.25.175.72 at 2014-10-11 16:44:37 +0700
+F, [2014-10-11T16:44:37.133738 #15291] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-12T19:19:24.377872 #10442]  INFO -- : Started GET "/Problem_set3" for 203.144.144.162 at 2014-10-12 19:19:24 +0700
+I, [2014-10-12T19:19:24.396700 #10442]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-12T19:19:24.418898 #10442]  INFO -- :   Rendered home/index.html.erb (4.3ms)
+I, [2014-10-12T19:19:24.419616 #10442]  INFO -- : Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-12T19:19:24.425116 #10442]  INFO -- : Started GET "/Problem_set3" for 203.144.144.164 at 2014-10-12 19:19:24 +0700
+I, [2014-10-12T19:19:24.426465 #10442]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-12T19:19:24.428768 #10442]  INFO -- :   Rendered home/index.html.erb (1.1ms)
+I, [2014-10-12T19:19:24.429042 #10442]  INFO -- : Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-13T14:54:37.617621 #10449]  INFO -- : Started GET "/Problem_set3" for 124.122.34.113 at 2014-10-13 14:54:37 +0700
+I, [2014-10-13T14:54:37.712068 #10449]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-13T14:54:37.735671 #10449]  INFO -- :   Rendered home/index.html.erb (3.8ms)
+I, [2014-10-13T14:54:37.736267 #10449]  INFO -- : Completed 200 OK in 24ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-13T14:59:07.002883 #10449]  INFO -- : Started GET "/Problem_set3/home/profile1" for 124.122.34.113 at 2014-10-13 14:59:07 +0700
+I, [2014-10-13T14:59:07.008325 #10449]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-13T14:59:07.021061 #10449]  INFO -- :   Rendered home/profile1.html.erb (2.3ms)
+I, [2014-10-13T14:59:07.021435 #10449]  INFO -- : Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-13T14:59:07.280022 #10449]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 124.122.34.113 at 2014-10-13 14:59:07 +0700
+F, [2014-10-13T14:59:07.284132 #10449] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-13T15:41:23.001752 #10449]  INFO -- : Started GET "/Problem_set3" for 192.41.170.223 at 2014-10-13 15:41:23 +0700
+I, [2014-10-13T15:41:23.006861 #10449]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-13T15:41:23.010763 #10449]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-13T15:41:23.011124 #10449]  INFO -- : Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-13T17:30:06.916415 #10449]  INFO -- : Started GET "/Problem_set3" for 124.122.34.113 at 2014-10-13 17:30:06 +0700
+I, [2014-10-13T17:30:06.921142 #10449]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-13T17:30:06.924977 #10449]  INFO -- :   Rendered home/index.html.erb (1.3ms)
+I, [2014-10-13T17:30:06.925379 #10449]  INFO -- : Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T18:26:08.646762 #26322]  INFO -- : Started GET "/Problem_set3" for 203.159.32.48 at 2014-10-14 18:26:08 +0700
+I, [2014-10-14T18:26:08.708061 #26322]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-14T18:26:08.734821 #26322]  INFO -- :   Rendered home/index.html.erb (4.9ms)
+I, [2014-10-14T18:26:08.735694 #26322]  INFO -- : Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:32:11.727700 #30643]  INFO -- : Started GET "/Problem_set3" for 192.41.170.136 at 2014-10-14 20:32:11 +0700
+I, [2014-10-14T20:32:11.916610 #30643]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-14T20:32:11.942946 #30643]  INFO -- :   Rendered home/index.html.erb (4.4ms)
+I, [2014-10-14T20:32:11.943785 #30643]  INFO -- : Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:32:13.932194 #30643]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.136 at 2014-10-14 20:32:13 +0700
+I, [2014-10-14T20:32:13.940813 #30643]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-14T20:32:13.949140 #30643]  INFO -- :   Rendered home/profile2.erb (3.2ms)
+I, [2014-10-14T20:32:13.949851 #30643]  INFO -- : Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:32:13.969314 #30643]  INFO -- : Started GET "/Problem_set3/images/Profile2.jpg" for 192.41.170.136 at 2014-10-14 20:32:13 +0700
+F, [2014-10-14T20:32:13.972269 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:35:37.499250 #30643]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.136 at 2014-10-14 20:35:37 +0700
+I, [2014-10-14T20:35:37.504654 #30643]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-14T20:35:37.512604 #30643]  INFO -- :   Rendered home/profile2.erb (0.7ms)
+I, [2014-10-14T20:35:37.513089 #30643]  INFO -- : Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:35:37.533871 #30643]  INFO -- : Started GET "/Problem_set3/images/Profile2.jpg" for 192.41.170.136 at 2014-10-14 20:35:37 +0700
+F, [2014-10-14T20:35:37.537854 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:36:25.087107 #30643]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.136 at 2014-10-14 20:36:25 +0700
+I, [2014-10-14T20:36:25.088981 #30643]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-14T20:36:25.090705 #30643]  INFO -- :   Rendered home/profile2.erb (0.3ms)
+I, [2014-10-14T20:36:25.091000 #30643]  INFO -- : Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:36:25.102947 #30643]  INFO -- : Started GET "/Problem_set3/images/Profile2.jpg" for 192.41.170.136 at 2014-10-14 20:36:25 +0700
+F, [2014-10-14T20:36:25.105376 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:36:50.293545 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:36:50 +0700
+I, [2014-10-14T20:36:50.295351 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:36:50.299572 #30643]  INFO -- :   Rendered home/profile1.html.erb (2.1ms)
+I, [2014-10-14T20:36:50.299911 #30643]  INFO -- : Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:36:50.312586 #30643]  INFO -- : Started GET "/Problem_set3/images/Images/Profile1.jpg" for 192.41.170.136 at 2014-10-14 20:36:50 +0700
+F, [2014-10-14T20:36:50.317048 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:38:04.278092 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:38:04 +0700
+I, [2014-10-14T20:38:04.283292 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:38:04.287451 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.7ms)
+I, [2014-10-14T20:38:04.287859 #30643]  INFO -- : Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:38:04.300015 #30643]  INFO -- : Started GET "/Problem_set3/images/Images/Profile1.jpg" for 192.41.170.136 at 2014-10-14 20:38:04 +0700
+F, [2014-10-14T20:38:04.301939 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:38:06.565334 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:38:06 +0700
+I, [2014-10-14T20:38:06.566520 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:38:06.567564 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.2ms)
+I, [2014-10-14T20:38:06.567767 #30643]  INFO -- : Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:38:06.576494 #30643]  INFO -- : Started GET "/Problem_set3/images/Images/Profile1.jpg" for 192.41.170.136 at 2014-10-14 20:38:06 +0700
+F, [2014-10-14T20:38:06.577712 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:38:11.746476 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:38:11 +0700
+I, [2014-10-14T20:38:11.747595 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:38:11.748669 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.2ms)
+I, [2014-10-14T20:38:11.748848 #30643]  INFO -- : Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:38:13.818238 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:38:13 +0700
+I, [2014-10-14T20:38:13.819286 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:38:13.820298 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.2ms)
+I, [2014-10-14T20:38:13.820477 #30643]  INFO -- : Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:40:00.159969 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:40:00 +0700
+I, [2014-10-14T20:40:00.164835 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:40:00.168695 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.8ms)
+I, [2014-10-14T20:40:00.169079 #30643]  INFO -- : Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:40:00.184573 #30643]  INFO -- : Started GET "/Problem_set3/images/Images/Profile1.jpg" for 192.41.170.136 at 2014-10-14 20:40:00 +0700
+F, [2014-10-14T20:40:00.188155 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:40:08.328595 #30643]  INFO -- : Started GET "/Problem_set3" for 192.41.170.136 at 2014-10-14 20:40:08 +0700
+I, [2014-10-14T20:40:08.331655 #30643]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-14T20:40:08.336122 #30643]  INFO -- :   Rendered home/index.html.erb (1.6ms)
+I, [2014-10-14T20:40:08.336499 #30643]  INFO -- : Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:40:10.407380 #30643]  INFO -- : Started GET "/Problem_set3/home/profile2" for 192.41.170.136 at 2014-10-14 20:40:10 +0700
+I, [2014-10-14T20:40:10.408665 #30643]  INFO -- : Processing by HomeController#profile2 as HTML
+I, [2014-10-14T20:40:10.409927 #30643]  INFO -- :   Rendered home/profile2.erb (0.3ms)
+I, [2014-10-14T20:40:10.410208 #30643]  INFO -- : Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:40:10.422406 #30643]  INFO -- : Started GET "/Problem_set3/images/Profile2.jpg" for 192.41.170.136 at 2014-10-14 20:40:10 +0700
+F, [2014-10-14T20:40:10.424121 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Profile2.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-14T20:40:13.460345 #30643]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.136 at 2014-10-14 20:40:13 +0700
+I, [2014-10-14T20:40:13.461587 #30643]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-14T20:40:13.462785 #30643]  INFO -- :   Rendered home/profile1.html.erb (0.3ms)
+I, [2014-10-14T20:40:13.463025 #30643]  INFO -- : Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+I, [2014-10-14T20:40:13.472333 #30643]  INFO -- : Started GET "/Problem_set3/images/Images/Profile1.jpg" for 192.41.170.136 at 2014-10-14 20:40:13 +0700
+F, [2014-10-14T20:40:13.473602 #30643] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-15T20:23:05.960029 #18739]  INFO -- : Started GET "/Problem_set3" for 192.41.170.180 at 2014-10-15 20:23:05 +0700
+I, [2014-10-15T20:23:05.992115 #18739]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-15T20:23:06.016286 #18739]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-10-15T20:23:06.017045 #18739]  INFO -- : Completed 200 OK in 25ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+I, [2014-10-15T21:52:59.144765 #21953]  INFO -- : Started GET "/Problem_set3" for 1.46.232.49 at 2014-10-15 21:52:59 +0700
+I, [2014-10-15T21:52:59.167624 #21953]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-15T21:52:59.192406 #21953]  INFO -- :   Rendered home/index.html.erb (5.2ms)
+I, [2014-10-15T21:52:59.193305 #21953]  INFO -- : Completed 200 OK in 25ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-16T10:16:24.660892 #17286]  INFO -- : Started GET "/Problem_set3" for 192.41.170.193 at 2014-10-16 10:16:24 +0700
+I, [2014-10-16T10:16:24.679617 #17286]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-16T10:16:24.702404 #17286]  INFO -- :   Rendered home/index.html.erb (4.4ms)
+I, [2014-10-16T10:16:24.703169 #17286]  INFO -- : Completed 200 OK in 23ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+I, [2014-10-16T10:16:26.699110 #17286]  INFO -- : Started GET "/Problem_set3/home/profile1" for 192.41.170.193 at 2014-10-16 10:16:26 +0700
+I, [2014-10-16T10:16:26.705162 #17286]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-16T10:16:26.719609 #17286]  INFO -- :   Rendered home/profile1.html.erb (2.3ms)
+I, [2014-10-16T10:16:26.719992 #17286]  INFO -- : Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-16T10:16:26.740999 #17286]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 192.41.170.193 at 2014-10-16 10:16:26 +0700
+F, [2014-10-16T10:16:26.744392 #17286] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-18T00:28:51.349250 #17286]  INFO -- : Started GET "/Problem_set3" for 66.249.79.41 at 2014-10-18 00:28:51 +0700
+I, [2014-10-18T00:28:51.354407 #17286]  INFO -- : Processing by HomeController#index as */*
+I, [2014-10-18T00:28:51.368679 #17286]  INFO -- :   Rendered home/index.html.erb (2.8ms)
+I, [2014-10-18T00:28:51.369125 #17286]  INFO -- : Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-18T00:33:22.161553 #17286]  INFO -- : Started GET "/Problem_set3/home/profile2" for 66.249.79.49 at 2014-10-18 00:33:22 +0700
+I, [2014-10-18T00:33:22.167255 #17286]  INFO -- : Processing by HomeController#profile2 as */*
+I, [2014-10-18T00:33:22.180778 #17286]  INFO -- :   Rendered home/profile2.erb (1.8ms)
+I, [2014-10-18T00:33:22.181176 #17286]  INFO -- : Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-18T00:36:15.838312 #17286]  INFO -- : Started GET "/Problem_set3/home/profile1" for 66.249.79.33 at 2014-10-18 00:36:15 +0700
+I, [2014-10-18T00:36:15.843318 #17286]  INFO -- : Processing by HomeController#profile1 as */*
+I, [2014-10-18T00:36:15.857089 #17286]  INFO -- :   Rendered home/profile1.html.erb (1.9ms)
+I, [2014-10-18T00:36:15.857467 #17286]  INFO -- : Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-26T23:21:05.947458 #20193]  INFO -- : Started GET "/Problem_set3" for 203.159.39.14 at 2014-10-26 23:21:05 +0700
+I, [2014-10-26T23:21:05.975983 #20193]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-26T23:21:06.001092 #20193]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-10-26T23:21:06.001970 #20193]  INFO -- : Completed 200 OK in 26ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-28T13:15:04.261744 #5589]  INFO -- : Started GET "/Problem_set3" for 66.249.71.115 at 2014-10-28 13:15:04 +0700
+I, [2014-10-28T13:15:04.284860 #5589]  INFO -- : Processing by HomeController#index as */*
+I, [2014-10-28T13:15:04.311816 #5589]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-10-28T13:15:04.312566 #5589]  INFO -- : Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-28T13:16:59.952446 #5589]  INFO -- : Started GET "/Problem_set3/home/profile2" for 66.249.71.97 at 2014-10-28 13:16:59 +0700
+I, [2014-10-28T13:16:59.958824 #5589]  INFO -- : Processing by HomeController#profile2 as */*
+I, [2014-10-28T13:16:59.975686 #5589]  INFO -- :   Rendered home/profile2.erb (2.3ms)
+I, [2014-10-28T13:16:59.976113 #5589]  INFO -- : Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+I, [2014-10-28T13:20:07.309244 #5589]  INFO -- : Started GET "/Problem_set3/home/profile1" for 66.249.71.79 at 2014-10-28 13:20:07 +0700
+I, [2014-10-28T13:20:07.315271 #5589]  INFO -- : Processing by HomeController#profile1 as */*
+I, [2014-10-28T13:20:07.331764 #5589]  INFO -- :   Rendered home/profile1.html.erb (2.2ms)
+I, [2014-10-28T13:20:07.332325 #5589]  INFO -- : Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-29T11:03:35.196816 #5589]  INFO -- : Started GET "/Problem_set3" for 192.41.170.142 at 2014-10-29 11:03:35 +0700
+I, [2014-10-29T11:03:35.201620 #5589]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-29T11:03:35.212625 #5589]  INFO -- :   Rendered home/index.html.erb (2.9ms)
+I, [2014-10-29T11:03:35.213056 #5589]  INFO -- : Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+I, [2014-10-29T11:05:40.179651 #5589]  INFO -- : Started GET "/Problem_set3" for 192.41.170.142 at 2014-10-29 11:05:40 +0700
+I, [2014-10-29T11:05:40.184315 #5589]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-29T11:05:40.188910 #5589]  INFO -- :   Rendered home/index.html.erb (1.5ms)
+I, [2014-10-29T11:05:40.189346 #5589]  INFO -- : Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+I, [2014-10-30T14:42:19.965016 #5589]  INFO -- : Started GET "/Problem_set3" for 203.159.40.161 at 2014-10-30 14:42:19 +0700
+I, [2014-10-30T14:42:19.979000 #5589]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-30T14:42:19.983542 #5589]  INFO -- :   Rendered home/index.html.erb (1.5ms)
+I, [2014-10-30T14:42:19.983989 #5589]  INFO -- : Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+I, [2014-10-30T14:43:00.084163 #5589]  INFO -- : Started GET "/Problem_set3/home/profile1" for 203.159.40.161 at 2014-10-30 14:43:00 +0700
+I, [2014-10-30T14:43:00.088740 #5589]  INFO -- : Processing by HomeController#profile1 as HTML
+I, [2014-10-30T14:43:00.100551 #5589]  INFO -- :   Rendered home/profile1.html.erb (1.9ms)
+I, [2014-10-30T14:43:00.100998 #5589]  INFO -- : Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+I, [2014-10-30T14:43:00.120262 #5589]  INFO -- : Started GET "/Problem_set3/Images/Profile1.jpg" for 203.159.40.161 at 2014-10-30 14:43:00 +0700
+F, [2014-10-30T14:43:00.123060 #5589] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/Images/Profile1.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  passenger (4.0.50) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.50) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.50) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-10-30T15:52:19.050173 #5589]  INFO -- : Started GET "/Problem_set3" for 203.159.40.161 at 2014-10-30 15:52:19 +0700
+I, [2014-10-30T15:52:19.061021 #5589]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-10-30T15:52:19.065543 #5589]  INFO -- :   Rendered home/index.html.erb (1.5ms)
+I, [2014-10-30T15:52:19.065988 #5589]  INFO -- : Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2014-11-03T23:01:12.951962 #11734]  INFO -- : Started GET "/Problem_set3" for 192.41.170.190 at 2014-11-03 23:01:12 +0700
+I, [2014-11-03T23:01:13.007843 #11734]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-03T23:01:13.075251 #11734]  INFO -- :   Rendered home/index.html.erb (4.9ms)
+I, [2014-11-03T23:01:13.076018 #11734]  INFO -- : Completed 200 OK in 68ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+I, [2014-11-03T23:40:17.378366 #14344]  INFO -- : Started GET "/Problem_set3" for 192.41.170.142 at 2014-11-03 23:40:17 +0700
+I, [2014-11-03T23:40:17.406915 #14344]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-03T23:40:17.430634 #14344]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-11-03T23:40:17.431342 #14344]  INFO -- : Completed 200 OK in 24ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+I, [2014-11-04T03:24:15.491607 #23875]  INFO -- : Started GET "/Problem_set3" for 203.159.39.64 at 2014-11-04 03:24:15 +0700
+I, [2014-11-04T03:24:15.535992 #23875]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-04T03:24:15.566684 #23875]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-11-04T03:24:15.567447 #23875]  INFO -- : Completed 200 OK in 31ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+I, [2014-11-05T14:55:29.404252 #23875]  INFO -- : Started GET "/Problem_set3" for 192.41.170.142 at 2014-11-05 14:55:29 +0700
+I, [2014-11-05T14:55:30.009496 #23875]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-05T14:55:30.223826 #23875]  INFO -- :   Rendered home/index.html.erb (54.1ms)
+I, [2014-11-05T14:55:30.241858 #23875]  INFO -- : Completed 200 OK in 226ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+I, [2014-11-07T11:11:52.025792 #1478]  INFO -- : Started GET "/Problem_set3" for 192.41.170.137 at 2014-11-07 11:11:52 +0700
+I, [2014-11-07T11:11:52.069604 #1478]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-07T11:11:52.099235 #1478]  INFO -- :   Rendered home/index.html.erb (4.8ms)
+I, [2014-11-07T11:11:52.099914 #1478]  INFO -- : Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+I, [2014-11-18T13:56:34.740532 #4043]  INFO -- : Started GET "/Problem_set3" for 203.159.10.196 at 2014-11-18 13:56:34 +0700
+I, [2014-11-18T13:56:34.770681 #4043]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-18T13:56:34.809142 #4043]  INFO -- :   Rendered home/index.html.erb (5.3ms)
+I, [2014-11-18T13:56:34.810176 #4043]  INFO -- : Completed 200 OK in 39ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+I, [2014-11-21T05:22:57.895993 #4043]  INFO -- : Started GET "/Problem_set3" for 66.249.77.43 at 2014-11-21 05:22:57 +0700
+I, [2014-11-21T05:22:58.115442 #4043]  INFO -- : Processing by HomeController#index as */*
+I, [2014-11-21T05:22:58.245166 #4043]  INFO -- :   Rendered home/index.html.erb (50.2ms)
+I, [2014-11-21T05:22:58.250552 #4043]  INFO -- : Completed 200 OK in 134ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+I, [2014-11-22T21:30:50.915038 #4043]  INFO -- : Started GET "/Problem_set3" for 203.144.144.162 at 2014-11-22 21:30:50 +0700
+I, [2014-11-22T21:30:50.937183 #4043]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-22T21:30:50.988683 #4043]  INFO -- :   Rendered home/index.html.erb (19.4ms)
+I, [2014-11-22T21:30:50.989193 #4043]  INFO -- : Completed 200 OK in 52ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+I, [2014-11-23T19:57:58.845443 #26542]  INFO -- : Started GET "/Problem_set3" for 203.159.32.34 at 2014-11-23 19:57:58 +0700
+I, [2014-11-23T19:57:58.890026 #26542]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-11-23T19:57:58.920964 #26542]  INFO -- :   Rendered home/index.html.erb (5.3ms)
+I, [2014-11-23T19:57:58.921737 #26542]  INFO -- : Completed 200 OK in 31ms (Views: 17.3ms | ActiveRecord: 0.0ms)

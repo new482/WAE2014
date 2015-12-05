@@ -1,0 +1,54 @@
+<div class="container">
+  <h2>Upload Question or Solution</h2>
+
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= link_to @school.schoolname, controller: :exams, action: :department%>
+        <%= " - " %>
+        <%= link_to @department.departmentname, controller: :exams, action: :course %>
+        <%= " - " %>
+        <%= link_to @course.coursename, controller: :exams, action: :files %>
+      </h3>
+    </div>
+    <div class="panel-body">
+      <%= form_tag ({controller: :exams, action: :create}), :enctype =>"multipart/form-data" do%>
+          <div class="form-group">
+            <p><%= label :file, "Select File :" %>
+              <%= file_field_tag "file", autofocus: 'autofocus' , accept: 'application/pdf', type: "file" %></p>
+          </div>
+
+          <div class="form-group">
+            <%= label :examtype, 'Select Exam Type :' %>
+
+            <% @arr = ['Finals', 'Mid-Sem'] %>
+
+            <%= select_tag(:examtype, options_for_select(@arr, selected: :examtype )) %>
+          </div>
+
+          <div class="form-group">
+            <p><%= label :posttype, 'Select Post Type :' %>
+              <%= radio_button_tag :posttype, 'question', :checked => true %>
+              <%= label :posttype_question, 'Question' %>
+              <%= radio_button_tag :posttype, 'answer' %>
+              <%= label :posttype_answer, 'Answer' %>
+            </p>
+          </div>
+          <div class="form-group">
+            <p><%= label :examtype, 'Year :' %>
+              <%= select_year(Date.today,{ :start_year => Time.now.year, :end_year => 1959}, {:name => 'year'}) %>
+            </p>
+          </div>
+
+          <%= hidden_field_tag :course_id, params[:id_course] %>
+          <%= hidden_field_tag :user_id, current_user.id %>
+          <% if current_user.role_id == 1 %>
+              <%= hidden_field_tag(:accepted, true) %>
+              <%= hidden_field_tag(:acceptedby, current_user.id.to_s) %>
+          <% else %>
+              <%= hidden_field_tag(:accepted, false) %>
+          <% end %>
+          <%= submit_tag 'Upload', :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

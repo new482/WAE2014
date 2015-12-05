@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Choose Course</h2>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= link_to @school.schoolname, controller: :exams, action: :department%>
+        <%=" - " + @department.departmentname %></h3>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Course Code</th>
+        <th>Offered Semester</th>
+        <th>Credit</th>
+        <th>Course Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @courses.each do |i| %>
+          <tr>
+            <td style="width: 100px"><%= i.course_code %></td>
+            <td style="width: 150px"><%= i.offered_sem %></td>
+            <td style="width: 150px"><%= i.credit%> </td>
+            <td style="width: 300px"><%= link_to i.coursename, controller: :exams, action: :files, id_course: i.id%></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+

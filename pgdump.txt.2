@@ -1,0 +1,1142 @@
+--
+-- PostgreSQL database cluster dump
+--
+
+SET default_transaction_read_only = off;
+
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+
+--
+-- Roles
+--
+
+CREATE ROLE postgres;
+ALTER ROLE postgres WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION;
+CREATE ROLE web6;
+ALTER ROLE web6 WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN NOREPLICATION;
+
+
+
+
+
+
+--
+-- Database creation
+--
+
+CREATE DATABASE "Problem_set2_development" WITH TEMPLATE = template0 OWNER = web6;
+CREATE DATABASE "Problem_set2_production" WITH TEMPLATE = template0 OWNER = web6;
+CREATE DATABASE "Problem_set2_test" WITH TEMPLATE = template0 OWNER = web6;
+CREATE DATABASE "Problem_set4_development" WITH TEMPLATE = template0 OWNER = web6;
+CREATE DATABASE "Problem_set4_production" WITH TEMPLATE = template0 OWNER = web6;
+CREATE DATABASE "Problem_set4_test" WITH TEMPLATE = template0 OWNER = web6;
+REVOKE ALL ON DATABASE template1 FROM PUBLIC;
+REVOKE ALL ON DATABASE template1 FROM postgres;
+GRANT ALL ON DATABASE template1 TO postgres;
+GRANT CONNECT ON DATABASE template1 TO PUBLIC;
+
+
+\connect "Problem_set2_development"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: quotations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE quotations (
+    id integer NOT NULL,
+    author_name character varying(255),
+    category character varying(255),
+    quote text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.quotations OWNER TO web6;
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE quotations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.quotations_id_seq OWNER TO web6;
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE quotations_id_seq OWNED BY quotations.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO web6;
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY quotations ALTER COLUMN id SET DEFAULT nextval('quotations_id_seq'::regclass);
+
+
+--
+-- Data for Name: quotations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY quotations (id, author_name, category, quote, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('quotations_id_seq', 1, false);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY schema_migrations (version) FROM stdin;
+20140917113558
+\.
+
+
+--
+-- Name: quotations_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY quotations
+    ADD CONSTRAINT quotations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect "Problem_set2_production"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: quotations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE quotations (
+    id integer NOT NULL,
+    author_name character varying(255),
+    category character varying(255),
+    quote text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.quotations OWNER TO web6;
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE quotations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.quotations_id_seq OWNER TO web6;
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE quotations_id_seq OWNED BY quotations.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO web6;
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY quotations ALTER COLUMN id SET DEFAULT nextval('quotations_id_seq'::regclass);
+
+
+--
+-- Data for Name: quotations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY quotations (id, author_name, category, quote, created_at, updated_at) FROM stdin;
+1	test	test1	test	2014-09-19 13:18:03.097175	2014-09-19 13:18:03.097175
+2	NiwNew	Niw Category	Hello world	2014-09-19 13:18:29.17971	2014-09-19 13:18:29.17971
+3	Manish	Niw Category	test	2014-09-19 13:18:44.638572	2014-09-19 13:18:44.638572
+4	Benjamin	test4	test	2014-09-19 13:19:09.715213	2014-09-19 13:19:09.715213
+5	test2	test7	ret	2014-09-19 13:19:41.371982	2014-09-19 13:19:41.371982
+6	test6	test1	rrrrr	2014-09-19 13:20:04.891519	2014-09-19 13:20:04.891519
+7	ttttttttt	Niw Category	ttttttttt	2014-09-19 13:45:10.317964	2014-09-19 13:45:10.317964
+8	cop	test4	cop	2014-09-19 14:06:05.939181	2014-09-19 14:06:05.939181
+9	Ted Turner		J'aurais voulu être un artiste	2014-09-19 16:14:01.256119	2014-09-19 16:14:01.256119
+10	New Worapol		Love is Love!	2014-09-19 16:14:01.356668	2014-09-19 16:14:01.356668
+11	Cop Pipat		Miss you	2014-09-19 16:14:01.370441	2014-09-19 16:14:01.370441
+12	abc		abc	2014-09-19 16:14:01.381505	2014-09-19 16:14:01.381505
+13	cop		cop	2014-09-19 16:14:01.388103	2014-09-19 16:14:01.388103
+14	Poom		love Yok naaa~	2014-09-19 16:14:01.393297	2014-09-19 16:14:01.393297
+15	Poom		:3	2014-09-19 16:14:01.396752	2014-09-19 16:14:01.396752
+16	Yok		P'Poom  with all my heart naa 	2014-09-19 16:14:01.398801	2014-09-19 16:14:01.398801
+17	SA TA		POOM Thinking of Yok all the Time!!	2014-09-19 16:14:01.400874	2014-09-19 16:14:01.400874
+18	PooM		I'm Gay, I'm I Know since I was born.	2014-09-19 16:14:01.408035	2014-09-19 16:14:01.408035
+19	PooM		The man is the real man, when he love man	2014-09-19 16:14:01.409756	2014-09-19 16:14:01.409756
+20	piggy	funny	i am pig	2014-09-30 16:30:35.203416	2014-09-30 16:30:35.203416
+\.
+
+
+--
+-- Name: quotations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('quotations_id_seq', 20, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY schema_migrations (version) FROM stdin;
+20140917113558
+\.
+
+
+--
+-- Name: quotations_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY quotations
+    ADD CONSTRAINT quotations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect "Problem_set2_test"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect "Problem_set4_development"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: members; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE members (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.members OWNER TO web6;
+
+--
+-- Name: members_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE members_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.members_id_seq OWNER TO web6;
+
+--
+-- Name: members_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE members_id_seq OWNED BY members.id;
+
+
+--
+-- Name: roles; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE roles (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    title character varying(255) NOT NULL,
+    description text NOT NULL,
+    the_role text NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.roles OWNER TO web6;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE roles_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.roles_id_seq OWNER TO web6;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO web6;
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    email character varying(255) DEFAULT ''::character varying NOT NULL,
+    encrypted_password character varying(255) DEFAULT ''::character varying NOT NULL,
+    reset_password_token character varying(255),
+    reset_password_sent_at timestamp without time zone,
+    remember_created_at timestamp without time zone,
+    sign_in_count integer DEFAULT 0 NOT NULL,
+    current_sign_in_at timestamp without time zone,
+    last_sign_in_at timestamp without time zone,
+    current_sign_in_ip inet,
+    last_sign_in_ip inet,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    role_id integer
+);
+
+
+ALTER TABLE public.users OWNER TO web6;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.users_id_seq OWNER TO web6;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY members ALTER COLUMN id SET DEFAULT nextval('members_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Data for Name: members; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY members (id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('members_id_seq', 1, false);
+
+
+--
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY roles (id, name, title, description, the_role, created_at, updated_at) FROM stdin;
+1	admin	role for admin	this user can do anything	{"system":{"administrator":true}}	2014-10-15 07:36:08.867304	2014-10-15 07:36:08.919064
+\.
+
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('roles_id_seq', 1, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY schema_migrations (version) FROM stdin;
+20141009140837
+20141009140936
+20141009141719
+20141009141903
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, role_id) FROM stdin;
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('users_id_seq', 1, false);
+
+
+--
+-- Name: members_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY members
+    ADD CONSTRAINT members_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY roles
+    ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
+
+
+--
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (reset_password_token);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect "Problem_set4_production"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: members; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE members (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.members OWNER TO web6;
+
+--
+-- Name: members_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE members_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.members_id_seq OWNER TO web6;
+
+--
+-- Name: members_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE members_id_seq OWNED BY members.id;
+
+
+--
+-- Name: roles; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE roles (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    title character varying(255) NOT NULL,
+    description text NOT NULL,
+    the_role text NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.roles OWNER TO web6;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE roles_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.roles_id_seq OWNER TO web6;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO web6;
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    email character varying(255) DEFAULT ''::character varying NOT NULL,
+    encrypted_password character varying(255) DEFAULT ''::character varying NOT NULL,
+    reset_password_token character varying(255),
+    reset_password_sent_at timestamp without time zone,
+    remember_created_at timestamp without time zone,
+    sign_in_count integer DEFAULT 0 NOT NULL,
+    current_sign_in_at timestamp without time zone,
+    last_sign_in_at timestamp without time zone,
+    current_sign_in_ip inet,
+    last_sign_in_ip inet,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    role_id integer
+);
+
+
+ALTER TABLE public.users OWNER TO web6;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: web6
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.users_id_seq OWNER TO web6;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: web6
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY members ALTER COLUMN id SET DEFAULT nextval('members_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: web6
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Data for Name: members; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY members (id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('members_id_seq', 1, false);
+
+
+--
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY roles (id, name, title, description, the_role, created_at, updated_at) FROM stdin;
+1	admin	role for admin	this user can do anything	{"system":{"administrator":true}}	2014-10-15 09:38:10.516843	2014-10-15 09:38:10.535094
+\.
+
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('roles_id_seq', 1, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY schema_migrations (version) FROM stdin;
+20141009141903
+20141009141719
+20141009140837
+20141009140936
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: web6
+--
+
+COPY users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, role_id) FROM stdin;
+5	abc@abc.com	$2a$10$b7m88epTKZ6.n.S4xSy9hukF8aGPxoR.qHMJACfELtBctAkR3gRKy	\N	\N	\N	1	2014-10-15 13:21:03.579934	2014-10-15 13:21:03.579934	203.144.144.172	203.144.144.172	2014-10-15 13:21:03.517213	2014-10-15 15:44:37.917903	2
+7	user4@ait.asia	$2a$10$sDuUQqGlclKthoRXfnCf3urGQKpypwRx8mWpW6hDnN/8urK6R15oq	\N	\N	\N	3	2014-10-15 16:50:34.229505	2014-10-15 16:14:57.891124	192.41.170.180	192.41.170.180	2014-10-15 15:51:39.254265	2014-10-15 16:51:04.477026	2
+6	user3@ait.asia	$2a$10$EErCoadKnFeM0EI.wiKwwOHfCXCbj6vkzX8ccK8aPpb.3eef4NESK	\N	\N	\N	2	2014-10-15 16:15:15.110573	2014-10-15 13:47:56.729251	192.41.170.180	192.41.170.180	2014-10-15 13:47:56.720945	2014-10-15 16:51:08.91936	3
+4	user1@ait.asia	$2a$10$CQt81KgzesdfoAvt0Q4hCeLswuWSamDCq.FS0Auhbi.7137uNwFDO	\N	\N	\N	2	2014-10-15 15:09:27.804311	2014-10-15 09:57:15.253158	192.41.170.180	192.41.170.180	2014-10-15 09:57:15.238574	2014-10-15 16:51:10.015896	3
+3	admin@ait.asia	$2a$10$hcBYTbaT202aFPvWlZdqDuIDUeaENCLglXJ3Ul/jImQnqyzCKDdi6	\N	\N	\N	21	2014-10-15 16:51:35.429815	2014-10-15 16:50:42.173481	192.41.170.180	192.41.170.180	2014-10-15 09:41:44.657108	2014-10-15 16:51:35.430952	1
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: web6
+--
+
+SELECT pg_catalog.setval('users_id_seq', 7, true);
+
+
+--
+-- Name: members_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY members
+    ADD CONSTRAINT members_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY roles
+    ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: web6; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
+
+
+--
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (reset_password_token);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: web6; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect "Problem_set4_test"
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect postgres
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: postgres; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON DATABASE postgres IS 'default administrative connection database';
+
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect template1
+
+SET default_transaction_read_only = off;
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: template1; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON DATABASE template1 IS 'default template for new databases';
+
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+--
+-- PostgreSQL database cluster dump complete
+--
+

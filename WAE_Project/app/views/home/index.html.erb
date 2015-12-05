@@ -1,0 +1,42 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Join us</h1>
+          <p>
+            Become our member. Upload and Share more question and help others
+          </p><br>
+          <p>
+            <%= button_to 'Join Us', new_user_registration_path, :method => 'get', :class => 'btn btn-lg btn-default'%>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item active">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>View Questions Papers!</h1>
+          <p>
+            Old exam papers are a great way to revise and prepare for your exams.
+            This way you can find out what you already know and what you don't know.
+            They also help you manage your time better and be familiar with the terminology and vocabulary used in the actual exam.
+          </p>
+          <p>
+            <%= button_to 'View',exams_home_path, :method => 'get', :class => 'btn btn-lg btn-default'%>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

@@ -1,0 +1,8 @@
+<h1>Fetching images from abc.com</h1>
+<%= link_to 'Back to Home', home_index_path %><br/><br/>
+
+<p>
+  <% @moviesList.each do |element| %>
+    <li> <%= element.to_s.html_safe %></li>
+  <% end %>
+</p>

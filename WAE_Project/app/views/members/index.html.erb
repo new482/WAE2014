@@ -1,0 +1,144 @@
+<div class="container">
+  <% content_for :head do  %>
+      <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <% end  %>
+  <h2>Dashboard</h2>
+
+  <% if @checkAdmin == 1  %>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">All Users</h3>
+        </div>
+        <table class="table table-striped" >
+          <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Registered Date</th>
+            <th>Last signed in</th>
+            <th>Signed In Times</th>
+            <th>Ban/Unban User</th>
+            <th>Make Admin</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @members.each do |member| %>
+              <tr>
+                <td style="width: 100px"><%= member.username %></td>
+                <td style="width: 100px"><%= member.email %></td>
+                <td style="width: 250px"><%= member.created_at %></td>
+                <td style="width: 250px"><%= member.last_sign_in_at %></td>
+                <td style="width: 150px"><%= member.sign_in_count %></td>
+                <td style="width: 150px">
+                  <div class="wrap">
+                    <% if member.id != current_user.id %>
+                        <% if member.role_id == 3 %>
+                            <%=link_to 'UnBan',edit_member_path(member.id, :ban => 0), :class => 'btn btn-primary'  %>
+                        <% elsif member.role_id == 2 %>
+                            <%=link_to 'Ban', edit_member_path(member.id, :ban => 1), :class => 'btn btn-primary'  %>
+                        <% end %>
+                    <% end%>
+                  </div>
+                </td>
+                <td style="width: 200px">
+                  <div class="wrap">
+                    <% if member.id != current_user.id %>
+                        <% if member.role_id != 1 %>
+                            <%=link_to 'Make Admin',edit_member_path(member.id, :admin => 1), :class => 'btn btn-primary'  %>
+                        <% else %>
+                            Admin
+                        <% end %>
+                    <% end%>
+                  </div>
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Admins</h3>
+        </div>
+        <table class="table table-striped" >
+          <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Remove as Admin</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @members.each do |member| %>
+              <% if member.role_id == 1 %>
+                  <tr>
+                    <td style="width: 100px"><%= member.username %></td>
+                    <td style="width: 100px"><%= member.email %></td>
+                    <td style="width: 100px">
+                      <div class="wrap">
+                        <% if member.id != current_user.id %>
+                            <%=link_to 'Remove',edit_member_path(member.id, :admin => 0), :class => 'btn btn-primary'  %>
+                        <%end %>
+                      </div>
+                    </td>
+                  </tr>
+              <% end %>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Recently Registered Users</h3>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Registered Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @members_recent_register.each do |member| %>
+              <tr>
+                <td style="width: 100px"><%= member.username %></td>
+                <td style="width: 150px"><%= member.email %></td>
+                <td style="width: 100px"><%= member.created_at %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Recently Signed In Users</h3>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Signed In Times</th>
+            <th>Last signed in</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @members_recent_login.each do |member| %>
+              <tr>
+                <td style="width: 100px"><%= member.username %></td>
+                <td style="width: 150px"><%= member.email %></td>
+                <td style="width: 100px"><%= member.sign_in_count %></td>
+                <td style="width: 100px"><%= member.last_sign_in_at %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+  <% end %>
+  <br>
+</div>

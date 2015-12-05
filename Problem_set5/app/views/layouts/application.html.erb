@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questions</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+ <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if flash[:notice] %>
+    <p class="notice"><%= notice %></p>
+<% end %>
+<% if flash[:alert] %>
+    <p class="alert"><%= alert %></p>
+<% end %>
+<% if flash[:error] %>
+    <div id="error">
+      <%= flash[:error] %>
+    </div>
+<% end %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 header">
+     <h2>"Skeletal" Admin Implementation</h2>
+    </div>
+    <div class="span12 header">
+      <ul>
+        <li><%= link_to 'Types of Content', 'Problem_set5/document/q1.pdf' %></li>
+        <li><%= link_to 'Content Data Model', 'Problem_set5/document/q2.pdf' %></li>
+        <li>Workflow for each kind of content
+        <ul>
+            <li><%= link_to 'Question Content Workflow', 'Problem_set5/document/q3_1.pdf' %></li>
+            <li><%= link_to 'Answer Content Workflow', 'Problem_set5/document/q3_2.pdf' %></li>
+        </ul>
+        </li>
+        <li><%= link_to 'Versioning System', 'Problem_set5/document/q4.pdf' %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span9 main_content">
+      <%= yield :role_main %>
+      <%= yield %>
+    </div>
+    <div class="span3 manage_panel">
+      <a href="/">&larr; Home</a>
+      </br>
+      <%= yield :role_sidebar %>
+      <%= render :partial => "layouts/current_user_info" %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
